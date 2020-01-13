@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <style>
+        body {
+            background-color: teal;
+        }  
+
+        .swipe {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 200px;
+            position: relative;
+            min-width: 27px;
+            max-width: 28px;
+            margin: auto;
+        }
+
+        .swipe-img {
+            -webkit-animation: swipe-img 5s infinite; /* Safari 4+ */
+            -moz-animation:    swipe-img 5s infinite; /* Fx 2+ */
+            -o-animation:      swipe-img 5s infinite; /* Opera 12+ */
+            animation:         swipe-img 5s infinite; /* IE 10+, Fx 29+ */
+            animation-delay: 0.3s;
+            transform-origin: bottom;
+            min-height: 150px;
+            min-width: 120px;
+            max-height: 155px;
+            max-width: 125px;
+        }
+
+        .swipe-line {
+            position: absolute;
+            background-color: white;
+            margin-top: -43px;
+            height: 18px;
+            border-radius: 10px;
+            margin-left: -8px;
+            opacity: 0.5;
+            -webkit-animation: swipe-line 5s infinite; /* Safari 4+ */
+            -moz-animation:    swipe-line 5s infinite; /* Fx 2+ */
+            -o-animation:      swipe-line 5s infinite; /* Opera 12+ */
+            animation: swipe-line 5s infinite; /* IE 10+, Fx 29+ */
+            animation-delay: 0.3s;
+            right:0;
+        }
+
+        @keyframes swipe-line {
+            8% {
+                left: 50px;
+           }
+            20% {
+                left:-14px;
+                opacity: 0.5;
+           }
+           40% {
+               opacity: 0;
+           }
+           100% {
+               opacity: 0;
+           }
+        }
+
+        @keyframes swipe-img {
+
+            10% {
+                transform: rotate(7deg);
+            }
+            20% {
+                transform: rotate(-10deg);
+            }
+            30% {
+                transform: rotate(0deg);
+                opacity: 1;
+            }
+            40% {
+                transform: translate(-13em);
+                opacity: 0;
+            }
+            41% {
+                transform: translate(0em);
+            }
+            60% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="swipe">
+        <img src="swipee.svg" class="swipe-img">
+        <div class="swipe-line"></div>
+    </div>
+
+    <script>
+        
+    </script>
+</body>
+</html>
